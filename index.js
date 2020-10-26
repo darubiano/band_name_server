@@ -3,6 +3,7 @@ npm init -y
 npm i express
 npm i dotenv
 npm i socket.io
+npm i uuid
 # probar
 node index.js
 # modo demonio

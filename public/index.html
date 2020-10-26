@@ -17,9 +17,16 @@
             console.log('Perdimos conexion');
         });
         //Envar un json
-        socket.emit('mensaje', {nombre:'Fernando'});
+        socket.emit('mensaje', {nombre:'David'});
         socket.on('mensaje',function(mensaje){
             console.log('Escuchando', mensaje);
+        });
+        socket.on("flutter-web",function(payload){
+            console.log('recibido', payload);
+        });
+        socket.on("active-bands",function(payload){
+            console.clear();
+            console.table(payload);
         });
     </script>
 </body>
